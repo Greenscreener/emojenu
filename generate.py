@@ -2,7 +2,7 @@ import os
 
 def get_symbols(line):
     codepoints = line.split(';')[0].strip().split()
-    keywords = ' '.join(line.split('#')[1].strip().split(' ')[1:])
+    keywords = ' '.join(line.split('#')[1].strip().split(' ')[2:])
     return (codepoints, keywords)
 
 
@@ -17,7 +17,7 @@ def format_line(codepoints, desc):
 with open("emoji-test.txt") as f:
     emoji_file = f.read()
 
-emoji = [x for x in emoji_file.split('\n') if not x.startswith("#") and x]
+emoji = [x for x in emoji_file.split('\n') if not x.strip().startswith("#") and x]
 
 emoji_list = [get_symbols(x) for x in emoji]
 
