@@ -12,6 +12,6 @@ fi
 
 emoji=$(cat ~/.config/emoji ~/.config/kaomoji ~/.config/emojenu-custom-chars | grep "^$(echo $@)|" | cut -d '|' -f 2 | tr -s '\r')
 
-echo "$emoji" | xclip -selection clipboard
+printf "$emoji" | xclip -selection clipboard
 
 xdotool windowactivate $window

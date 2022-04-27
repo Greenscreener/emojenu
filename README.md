@@ -2,6 +2,7 @@
 
 A [Dmenu](https://tools.suckless.org/dmenu) emoji selector. Updated to emoji
 14.0 and added custom chars support with `~/.config/emojenu-custom-chars` by GS.
+I also fixed it appending newlines to your emoji, which is pretty annoying ngl.
 
 ## Installation
 
