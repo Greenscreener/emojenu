@@ -1,6 +1,7 @@
 # Emojenu
 
-A [Dmenu](https://tools.suckless.org/dmenu) emoji selector.
+A [Dmenu](https://tools.suckless.org/dmenu) emoji selector. Updated to emoji
+14.0 and added custom chars support with `~/.config/emojenu-custom-chars` by GS.
 
 ## Installation
 
@@ -15,7 +16,7 @@ python3 generate.py
 ln -s $PWD/emojenu ~/.local/bin/emojenu
 ```
 
-`emoji-test.txt` is taken from https://unicode.org/Public/emoji/11.0/.
+`emoji-test.txt` is taken from https://unicode.org/Public/emoji/14.0/.
 
 ## Usage
 
