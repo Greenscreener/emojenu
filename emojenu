@@ -2,7 +2,7 @@
 
 window=$(xdotool getactivewindow)
 
-set -- junk $(cat ~/.config/emoji ~/.config/kaomoji ~/.config/emojenu-custom-chars | cut -d '|' -f 1 | dmenu -p emoji)
+set -- junk $(cat ~/.config/emoji ~/.config/kaomoji ~/.config/emojenu-custom-chars/* | dmenu -p emoji -fn 'FiraCode-15' -l 15 -i $1)
 
 shift
 
@@ -10,7 +10,9 @@ if [ $# -eq 0 ]; then
     exit
 fi
 
-emoji=$(cat ~/.config/emoji ~/.config/kaomoji ~/.config/emojenu-custom-chars | grep "^$(echo $@)|" | cut -d '|' -f 2 | tr -s '\r')
+echo $@
+
+emoji=$(echo $@ |  cut -d '|' -f 2 | tr -s '\r')
 
 printf "$emoji" | xclip -selection clipboard
 
